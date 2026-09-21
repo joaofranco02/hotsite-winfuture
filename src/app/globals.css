@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cores institucionais (dark mode) */
+  --color-bg: #05070c;
+  --color-surface: #0b0f19;
+  --color-border: #1c2436;
+  --color-primary: #1f4fff;
+  --color-primary-bright: #2f6bff;
+  --color-banner-from: #0a2a8c;
+  --color-banner-to: #0f3fd1;
+  --color-text: #ffffff;
+  --color-muted: #a7b0c0;
+  --color-dim: #6b7588;
+
+  /* Tipografia (variáveis injetadas por next/font em layout.tsx) */
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Raios discretos (cantos quase retos) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa o header fixo ao navegar por âncoras. */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+  /* Foco visível e consistente em toda a navegação por teclado. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-bright);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    /* Aproxima o eixo "expanded" descrito no briefing. */
+    letter-spacing: -0.01em;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Scrollbar discreta para o carrossel de ferramentas no mobile. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Respeita a preferência do sistema por menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
