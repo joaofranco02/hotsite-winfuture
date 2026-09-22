@@ -141,7 +141,7 @@ export const siteContent = {
     sideWords: ["IDEIAS", "PESSOAS", "SOLUÇÕES", "IMPACTO"],
     badge: "AQUI TALENTOS ENCONTRAM OPORTUNIDADES.",
     image: {
-      src: "/images/img1.png" as string | null,
+      src: "/images/img1.webp" as string | null,
       alt: "Estudantes em uma sala de aula da WIN acompanhando uma apresentação, com notebooks sobre as mesas.",
     },
   },
@@ -157,12 +157,12 @@ export const siteContent = {
     titleTop: "A IA NÃO SUBSTITUI A SUA FORMAÇÃO.",
     titleHighlight: "ELA AMPLIA O QUE VOCÊ CONSEGUE FAZER.",
     paragraphs: [
-      "A universidade ensina a profissão.",
-      "O WIN Future Universitário te mostra como usar a Inteligência Artificial para multiplicar o valor dela.",
+      "A universidade te forma para a profissão. Ela te dá a base — o conhecimento técnico que sustenta a sua carreira.",
+      "O WIN Future Universitário mostra como usar a Inteligência Artificial para multiplicar esse valor: transformar o que você aprende em resultado real, mais rápido e com mais alcance.",
     ],
     highlight: ["MAIS CONHECIMENTO.", "MAIS POSSIBILIDADES.", "MAIS FUTURO."],
     image: {
-      src: "/images/img2.png" as string | null,
+      src: "/images/img2.webp" as string | null,
       alt: "Três estudantes estudando juntos ao ar livre, com notebooks e tablet, em frente ao prédio da WIN.",
     },
   },
@@ -269,11 +269,11 @@ export const siteContent = {
       "Mais tempo para pensar",
     ],
     imageLeft: {
-      src: "/images/sem-ia.jpg" as string | null,
+      src: "/images/sem-ia.webp" as string | null,
       alt: "Estudante sobrecarregado, cabeça entre as mãos, diante do computador à noite.",
     },
     imageRight: {
-      src: "/images/img3.png" as string | null,
+      src: "/images/img3.webp" as string | null,
       alt: "Duas estudantes tranquilas e sorridentes estudando juntas em um notebook.",
     },
   },
@@ -423,7 +423,7 @@ export const siteContent = {
     phraseHighlight: "CRIA VALOR.",
     microcopy: ["VAGAS LIMITADAS", "INSCRIÇÃO ONLINE"],
     image: {
-      src: "/images/img5.png" as string | null,
+      src: "/images/img5.webp" as string | null,
       alt: "Quatro estudantes caminhando e conversando em frente ao prédio da WIN Business School.",
     },
   },

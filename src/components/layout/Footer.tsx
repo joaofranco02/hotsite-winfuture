@@ -11,18 +11,18 @@ const { event, meta, footer } = siteContent;
 export function Footer() {
   return (
     <footer className="border-t border-border bg-bg">
-      <div className="w-full px-5 py-16 sm:px-8 lg:px-12">
+      <div className="w-full px-5 py-8 sm:px-8 lg:px-12">
         {/* Marca + navegação (centralizada) + redes — mesma seção */}
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+        <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
           {/* Marca */}
           <div className="max-w-sm">
             <Link href="/#top" aria-label="Ir para a home" className="inline-block">
               <Logo />
             </Link>
-            <p className="mt-5 font-display text-sm font-bold uppercase tracking-tight text-muted">
+            <p className="mt-3 font-display text-sm font-bold uppercase tracking-tight text-muted">
               {footer.signature}
             </p>
-            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+            <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
               <li className="flex items-center gap-2 font-sans text-[13px] text-muted">
                 <CalendarDays className="size-4 text-primary-bright" aria-hidden="true" />
                 {event.date} · {event.time}
@@ -82,7 +82,7 @@ export function Footer() {
         </div>
 
         {/* Barra inferior — apenas o copyright, centralizado */}
-        <div className="mt-12 border-t border-border pt-6">
+        <div className="mt-8 border-t border-border pt-5">
           <p className="text-center font-sans text-xs text-dim">
             © {new Date().getFullYear()} {meta.name}. Todos os direitos reservados.
           </p>

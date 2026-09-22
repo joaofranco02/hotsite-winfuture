@@ -72,6 +72,7 @@ src/
 - **Conversão**: Inscrição através de um formulário (`/cadastro`).
 
 ### Lacunas e Próximos Passos (A Definir com o Cliente)
+
 Conforme análise do arquivo de Briefing original (`briefing-win-future-universitario.md`), ainda restam alguns itens de conteúdo para aprovação final da equipe de negócios/marketing:
 
 1. **Benefícios, FAQ e "Para quem é"**: As seções estão mapeadas no layout, mas o texto final (*copy*) não foi fornecido.
@@ -84,13 +85,17 @@ Conforme análise do arquivo de Briefing original (`briefing-win-future-universi
 
 1. Certifique-se de usar o Node.js na versão 20+ e o gerenciador de pacotes `pnpm` (recomendado).
 2. Instale as dependências:
+
    ```bash
    pnpm install
    ```
+
 3. Rode o servidor de desenvolvimento:
+
    ```bash
    pnpm dev
    ```
+
 4. Acesse `http://localhost:3000` no seu navegador. O Next.js recarregará automaticamente quando você salvar algum arquivo.
 
 ---

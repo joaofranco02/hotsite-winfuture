@@ -85,47 +85,6 @@ export function Hero() {
           {/* Fades suaves para blending na imagem */}
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-bg via-bg/40 to-transparent lg:via-bg/20" />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
-
-          {/* Container Relativo para Posição Absoluta dos Badges */}
-          <div className="absolute inset-0 p-5 sm:p-8">
-            {/* Sutil Badge flutuante Top-Right */}
-            <div className="absolute right-6 top-8 hidden sm:block">
-              <span className="rounded-full border border-white/10 bg-surface/40 px-4 py-2 font-display text-xs font-bold tracking-widest text-white backdrop-blur-md">
-                IDEIAS
-              </span>
-            </div>
-
-            {/* Sutil Badge flutuante Center-Left */}
-            <div className="absolute left-6 top-1/3 sm:left-12">
-              <span className="rounded-full border border-primary/30 bg-primary/10 px-4 py-2 font-display text-xs font-bold tracking-widest text-primary-bright backdrop-blur-md">
-                PESSOAS
-              </span>
-            </div>
-
-            {/* Sutil Badge flutuante Center-Right */}
-            <div className="absolute right-4 top-1/2 sm:right-10">
-              <span className="rounded-full border border-white/10 bg-surface/40 px-4 py-2 font-display text-xs font-bold tracking-widest text-white backdrop-blur-md">
-                SOLUÇÕES
-              </span>
-            </div>
-
-            {/* Sutil Badge flutuante Bottom-Left */}
-            <div className="absolute bottom-24 left-8 sm:bottom-32 sm:left-16">
-              <span className="rounded-full border border-white/10 bg-surface/40 px-4 py-2 font-display text-xs font-bold tracking-widest text-white backdrop-blur-md">
-                IMPACTO
-              </span>
-            </div>
-
-            {/* Selo Principal ancorado no rodapé da imagem (mobile-friendly) */}
-            <div className="absolute bottom-6 right-5 max-w-[14rem] sm:bottom-8 sm:right-8 sm:max-w-[16rem]">
-              <div className="rounded-sm border border-primary-bright/20 bg-surface/80 p-3 sm:p-4 backdrop-blur-md shadow-2xl">
-                <p className="font-display text-[11px] font-bold uppercase leading-tight tracking-tight text-white sm:text-sm">
-                  {hero.badge}
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </Reveal>
     </section>
