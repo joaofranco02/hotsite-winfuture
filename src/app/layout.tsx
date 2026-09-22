@@ -78,23 +78,27 @@ function EventJsonLd() {
   );
 }
 
+import { ToastProvider } from "@/components/ui/Toast";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${archivo.variable} ${inter.variable}`}>
       <body>
-        <a
-          href="#conteudo"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
-        >
-          Pular para o conteúdo
-        </a>
-        <Header />
-        <main id="conteudo">{children}</main>
-        <Footer />
-        <EventJsonLd />
-        <Analytics />
+        <ToastProvider>
+          <a
+            href="#conteudo"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:text-white"
+          >
+            Pular para o conteúdo
+          </a>
+          <Header />
+          <main id="conteudo">{children}</main>
+          <Footer />
+          <EventJsonLd />
+          <Analytics />
+        </ToastProvider>
       </body>
     </html>
   );

@@ -16,10 +16,7 @@ type CtaButtonProps = {
 };
 
 /**
- * CTA "GARANTIR MINHA VAGA". Fonte única: `siteContent.registration`.
- * - Com `url`: renderiza um link real e dispara tracking no clique.
- * - Sem `url`: renderiza um botão desabilitado de forma acessível
- *   (nunca inventa destino nem cria link quebrado).
+ * CTA "GARANTIR MINHA VAGA". Abre a página de cadastro em nova aba.
  */
 export function CtaButton({
   label,
@@ -28,29 +25,15 @@ export function CtaButton({
   location,
   fullWidth = false,
 }: CtaButtonProps) {
-  const { url, trackingEvent, ctaLabel } = siteContent.registration;
+  const { ctaLabel, trackingEvent } = siteContent.registration;
+  
   const text = label ?? ctaLabel;
   const width = fullWidth ? "w-full" : "";
   const classes = `${buttonClasses("primary", size)} ${width} ${className ?? ""}`;
 
-  if (!url) {
-    return (
-      <button
-        type="button"
-        disabled
-        aria-disabled="true"
-        title="Inscrições em breve"
-        className={classes}
-      >
-        {text}
-        <ArrowRight className="size-4" aria-hidden="true" />
-      </button>
-    );
-  }
-
   return (
     <a
-      href={url}
+      href="/cadastro"
       target="_blank"
       rel="noopener noreferrer"
       className={classes}

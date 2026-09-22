@@ -273,7 +273,7 @@ export const siteContent = {
       alt: "Estudante sobrecarregado, cabeça entre as mãos, diante do computador à noite.",
     },
     imageRight: {
-      src: "/images/com-ia.jpg" as string | null,
+      src: "/images/img3.png" as string | null,
       alt: "Duas estudantes tranquilas e sorridentes estudando juntas em um notebook.",
     },
   },
