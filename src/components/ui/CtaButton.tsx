@@ -16,7 +16,8 @@ type CtaButtonProps = {
 };
 
 /**
- * CTA "GARANTIR MINHA VAGA". Abre a página de cadastro em nova aba.
+ * CTA "GARANTIR MINHA VAGA". Abre a página de cadastro na mesma aba,
+ * preservando o histórico para que a seta "voltar" do navegador funcione.
  */
 export function CtaButton({
   label,
@@ -26,7 +27,7 @@ export function CtaButton({
   fullWidth = false,
 }: CtaButtonProps) {
   const { ctaLabel, trackingEvent } = siteContent.registration;
-  
+
   const text = label ?? ctaLabel;
   const width = fullWidth ? "w-full" : "";
   const classes = `${buttonClasses("primary", size)} ${width} ${className ?? ""}`;
@@ -34,8 +35,6 @@ export function CtaButton({
   return (
     <a
       href="/cadastro"
-      target="_blank"
-      rel="noopener noreferrer"
       className={classes}
       onClick={() => trackEvent(trackingEvent, { location })}
     >

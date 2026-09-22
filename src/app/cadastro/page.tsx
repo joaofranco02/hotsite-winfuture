@@ -1,13 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useToast } from "@/components/ui/Toast";
 import { trackEvent } from "@/lib/analytics";
 
 export default function CadastroPage() {
+  const router = useRouter();
   const { showToast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Volta para a página anterior; se o formulário foi aberto direto
+  // (sem histórico de navegação), cai para a home de forma segura.
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,6 +40,14 @@ export default function CadastroPage() {
       <div className="w-full max-w-lg overflow-hidden rounded-md border border-border bg-surface shadow-2xl">
         {/* Header */}
         <div className="border-b border-border bg-bg px-6 py-4">
+          <button
+            type="button"
+            onClick={handleBack}
+            className="mb-3 inline-flex items-center gap-2 font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:text-white"
+          >
+            <ArrowLeft className="size-4" aria-hidden="true" />
+            Voltar
+          </button>
           <h1 className="font-display text-lg font-bold uppercase tracking-tight text-white sm:text-xl">
             Cadastro de Inscrição
           </h1>
