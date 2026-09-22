@@ -36,7 +36,7 @@ export default function CadastroPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-bg p-4 sm:p-6">
+    <div className="flex min-h-screen items-start justify-center bg-bg px-4 pb-10 pt-24 sm:items-center sm:p-6 sm:pt-24">
       <div className="w-full max-w-lg overflow-hidden rounded-md border border-border bg-surface shadow-2xl">
         {/* Header */}
         <div className="border-b border-border bg-bg px-6 py-4">
