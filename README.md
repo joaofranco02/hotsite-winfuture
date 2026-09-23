@@ -1,6 +1,6 @@
 # WIN Future Universitário — Hot-site
 
-![WIN Future Universitário](public/images/img1.png)
+![WIN Future Universitário](public/images/img1.webp)
 
 Este é o repositório do hot-site **WIN Future Universitário**, uma imersão presencial focada no ensino prático do uso de Inteligência Artificial para alavancar a rotina acadêmica e profissional de estudantes universitários.
 
