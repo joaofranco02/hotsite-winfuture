@@ -71,16 +71,6 @@ src/
 - **Tríade Conceitual**: Conhecimento, Conexão, Ação.
 - **Conversão**: Inscrição através de um formulário (`/cadastro`).
 
-### Lacunas e Próximos Passos (A Definir com o Cliente)
-
-Conforme análise do arquivo de Briefing original (`briefing-win-future-universitario.md`), ainda restam alguns itens de conteúdo para aprovação final da equipe de negócios/marketing:
-
-1. **Benefícios, FAQ e "Para quem é"**: As seções estão mapeadas no layout, mas o texto final (*copy*) não foi fornecido.
-2. **Cronograma Oficial**: Os módulos na timeline da programação atual estão com placeholders (`[Conteúdo]`).
-3. **Endereço Físico**: Atualizar o endereço do local exato do evento em Belém.
-
----
-
 ## 🛠 Como executar localmente
 
 1. Certifique-se de usar o Node.js na versão 20+ e o gerenciador de pacotes `pnpm` (recomendado).
